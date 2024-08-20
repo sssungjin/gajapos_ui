@@ -1,0 +1,64 @@
+@media screen and (min-width: 1025px) and (min-height: 865px) {
+  .home {
+    display: flex;
+    height: 750px;
+
+    .row {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .table-header {
+        .align-items-end {
+          padding-right: 20px;
+        }
+      }
+    }
+
+    .table-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .wrapper-body {
+        flex: 1;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .payment {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .form-control,
+    .btn {
+      height: 50px; // Increase height of input fields and buttons
+    }
+
+    .btn-group {
+      .btn {
+        flex: 1;
+      }
+    }
+  }
+
+  .delivery {
+    height: 880px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .form-control,
+    .btn {
+      height: 50px; // Increase height of input fields and buttons
+    }
+
+    .btn-group {
+      .btn {
+        flex: 1;
+      }
+    }
+  }
+}

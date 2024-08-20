@@ -1,0 +1,19 @@
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .home {
+    .row {
+      .col-xs-6 {
+        min-height: 670px;
+      }
+    }
+  }
+
+  .table-wrapper {
+    .wrapper-body {
+      height: calc(100% - 90px);
+    }
+
+    .wrapper-footer {
+      height: 90px;
+    }
+  }
+}

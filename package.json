@@ -1,0 +1,53 @@
+{
+  "name": "pos4phill",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.7.4",
+    "dayjs": "^1.11.10",
+    "http-proxy-middleware": "^3.0.0",
+    "jwt-decode": "^4.0.0",
+    "moment": "^2.29.4",
+    "react": "^18.3.1",
+    "react-datetime": "^3.1.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-script": "^2.0.5",
+    "react-scripts": "^5.0.1",
+    "react-simple-keyboard": "^3.7.129",
+    "react-table": "^7.8.0",
+    "reactstrap": "^9.1.1",
+    "sass": "^1.71.1",
+    "svgo": "^3.3.2",
+    "vercel": "^34.2.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "vercel deploy"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.23.1"
+  },
+  "proxy": "http://localhost:3000"
+}

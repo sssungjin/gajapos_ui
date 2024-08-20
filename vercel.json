@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/moneyclub/pos4item.php",
+      "destination": "https://www.moneyclub01.com/pos4item.php"
+    },
+    {
+      "source": "/moneyclub/poslogin.php",
+      "destination": "https://www.moneyclub01.com/poslogin.php"
+    },
+    {
+      "source": "/api/gazapos/HomeServlet",
+      "destination": "http://localhost:8080/gazapos/HomeServlet"
+    }
+  ]
+}
