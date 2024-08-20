@@ -7,7 +7,7 @@ export const useAuth = () => {
     return storedState
       ? JSON.parse(storedState)
       : {
-          isLogin: false,
+          isLogin: true,
           showLogin: false,
           lastLoginTime: "0000-00-00 00:00:00",
           lastLogoutTime: "0000-00-00 00:00:00",
