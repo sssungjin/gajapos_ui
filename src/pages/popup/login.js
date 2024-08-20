@@ -36,51 +36,79 @@ const LoginPopup = ({ isOpen, onClose, callback, lastLoginTime }) => {
       setter: null,
     });
 
+  // const onLogin = async () => {
+  //   if (!id || !password) {
+  //     setAlertMessage("Please enter both ID and Password.");
+  //     return;
+  //   }
+
+  //   const jsonData = {
+  //     function: "login",
+  //     account: {
+  //       mb_id: id,
+  //       mb_password: password,
+  //     },
+  //   };
+
+  //   let config = {
+  //     method: "post",
+  //     url: JEPETTO_API_URL,
+  //     withCredentials: true,
+  //     data: jsonData,
+  //   };
+
+  //   try {
+  //     const response = await axios.request(config);
+  //     const parsedData = response.data;
+  //     if (parsedData.code === "200") {
+  //       callback?.(
+  //         parsedData.mb_last_login,
+  //         parsedData.mb_name,
+  //         parsedData.mb_id,
+  //         parsedData.mb_level,
+  //         parsedData.token
+  //       );
+  //       toggleModal(false);
+  //       setId("");
+  //       setPassword("");
+  //       resetBalance();
+  //     } else {
+  //       console.error("Response Data:", response.data);
+  //       alert("ID or Password is wrong. Please try again.");
+  //     }
+  //     resetBalance();
+  //   } catch (error) {
+  //     console.error("Error logging in: ", error);
+  //     alert("An error occurred while logging in. Please try again.");
+  //   }
+  // };
+
   const onLogin = async () => {
     if (!id || !password) {
       setAlertMessage("Please enter both ID and Password.");
       return;
     }
 
-    const jsonData = {
-      function: "login",
-      account: {
-        mb_id: id,
-        mb_password: password,
-      },
+    // 항상 로그인 성공으로 처리
+    const mockResponse = {
+      mb_last_login: new Date().toISOString(),
+      mb_name: "Test User",
+      mb_id: id,
+      mb_level: "admin",
+      token: "mock-token-12345",
     };
 
-    let config = {
-      method: "post",
-      url: JEPETTO_API_URL,
-      withCredentials: true,
-      data: jsonData,
-    };
-
-    try {
-      const response = await axios.request(config);
-      const parsedData = response.data;
-      if (parsedData.code === "200") {
-        callback?.(
-          parsedData.mb_last_login,
-          parsedData.mb_name,
-          parsedData.mb_id,
-          parsedData.mb_level,
-          parsedData.token
-        );
-        toggleModal(false);
-        setId("");
-        setPassword("");
-        resetBalance();
-      } else {
-        console.error("Response Data:", response.data);
-        alert("ID or Password is wrong. Please try again.");
-      }
-      resetBalance();
-    } catch (error) {
-      console.error("Error logging in: ", error);
-      alert("An error occurred while logging in. Please try again.");
-    }
+    callback?.(
+      mockResponse.mb_last_login,
+      mockResponse.mb_name,
+      mockResponse.mb_id,
+      mockResponse.mb_level,
+      mockResponse.token
+    );
+    toggleModal(false);
+    setId("");
+    setPassword("");
+    resetBalance();
   };
 
   return (
