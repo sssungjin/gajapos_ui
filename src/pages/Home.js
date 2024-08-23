@@ -896,7 +896,7 @@ const Home = () => {
               {truncateName(saleState.wholeCompanyName, 20)}
             </div>
           )}
-          <div className="d-flex flex-column align-items-end">
+          {/* <div className="d-flex flex-column align-items-end">
             <div className="d-flex align-items-center">
               {loginState.isLogin &&
                 loginState.loggedInMemberLevel === "10" && (
@@ -907,6 +907,25 @@ const Home = () => {
                     Tax
                   </button>
                 )}
+              <button className="btn btn-info" onClick={onLogin}>
+                {loginState.isLogin ? "LOGOUT" : "LOGIN"}
+              </button>
+            </div>
+            {loginState.isLogin && (
+              <div className="m-t-5" style={{ fontSize: "15px" }}>
+                Login: {loginState.lastLoginTime}
+              </div>
+            )}
+          </div> */}
+          <div className="d-flex flex-column align-items-end">
+            <div className="d-flex align-items-center">
+              {/* Always show the Tax button */}
+              <button
+                className="btn btn-warning mr-3"
+                onClick={() => (window.location.href = "/tax")}
+              >
+                Tax
+              </button>
               <button className="btn btn-info" onClick={onLogin}>
                 {loginState.isLogin ? "LOGOUT" : "LOGIN"}
               </button>
